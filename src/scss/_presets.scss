@@ -1,0 +1,23 @@
+@use 'variables';
+
+.container {
+	max-width: calc(var(--container-width) + var(--container-padding-x) * 2);
+	margin-inline: auto;
+	padding-inline: var(--container-padding-x);
+}
+
+// hide nav
+nav.nav--hide {
+	right: -50%;
+}
+
+body.no-scroll {
+	overflow: hidden;
+}
+
+.btn--reset {
+	margin: 0;
+	padding: 0;
+	border: none;
+	cursor: pointer;
+}
