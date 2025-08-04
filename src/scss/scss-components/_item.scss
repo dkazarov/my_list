@@ -1,0 +1,24 @@
+.content {
+	display: grid;
+	max-width: 100%;
+}
+.content__items-list {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(18rem, 1fr));
+	gap: 30px;
+}
+.content__item {
+	display: flex;
+	justify-content: space-between;
+	background: linear-gradient(45deg, rgb(235, 246, 243), rgb(231, 221, 146));
+	padding: 10px;
+	box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+	border-radius: 6px;
+}
+
+@media (max-width: 768px) {
+	.content__items-list {
+		grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));
+		gap: 20px;
+	}
+}

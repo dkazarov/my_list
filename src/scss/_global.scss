@@ -1,6 +1,9 @@
 @use 'variables' as *;
 
-html {
+html,
+body {
+	height: 100%;
+	margin: 0;
 	scroll-behavior: smooth;
 }
 
@@ -12,7 +15,10 @@ body {
 .wrapper {
 	display: flex;
 	flex-direction: column;
-	min-height: 100vh;
+	min-height: 100vh; /* Заполнить всю высоту экрана */
+}
+.main-content {
+	flex: 1 0 auto; /* Расширяется и занимает всё пространство между header и footer */
 }
 .container {
 	max-width: var(--container-width);
@@ -22,5 +28,9 @@ body {
 	flex-grow: 1;
 }
 .footer {
-	margin-top: auto;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	z-index: 100;
 }

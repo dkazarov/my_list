@@ -13,5 +13,8 @@
 //Vendor
 
 // Components
+@use './scss-components/title';
+@use './scss-components/item';
+@use './scss-components/random-btn';
 @use './scss-components/search';
 @use './scss-components/burger';
