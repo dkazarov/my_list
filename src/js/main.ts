@@ -18,6 +18,15 @@ const writeInput = () => {
 		}
 	});
 };
+// Видаляэ значення інпуту при кліку на хрестик
+const clearInput = () => {
+	inputClear?.addEventListener('click', () => {
+		clearInputValue();
+    if(inputField) {
+      inputClear.classList.add('--hide');
+    }
+	});
+};
 
 // Ховає хрестик якщо клацнув поза інпутом
 const hideInputClear = () => {
@@ -37,6 +46,6 @@ const clearInputValue = () => {
 	}
 };
 
-// Attach hideInputClear as a click event listener to the document
+clearInput();
 hideInputClear();
 writeInput();
