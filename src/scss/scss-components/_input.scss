@@ -4,6 +4,11 @@
 	margin: 6% 0;
 	max-width: 100%;
 }
+.input-container {
+	position: relative;
+	display: inline-block;
+	width: 33.33%; /* Соответствует ширине поля */
+}
 .user__input-field {
 	border: none;
 	border-bottom: 2px solid var(--main-text-color);
@@ -12,6 +17,8 @@
 	outline: none;
 	background-color: var(--body-color);
 	transition: background-color 0.6s ease-in-out;
+	overflow-x: hidden;
+	padding-right: 20px;
 
 	&:focus {
 		border-color: var(--action-color);
@@ -25,16 +32,17 @@
 	padding: 0.5rem 1rem;
 	border-radius: 4px;
 	transition: all 0.2s ease-in-out;
+	margin-left: 10px;
 
 	&:hover {
 		background-color: var(--action-hover-color);
 		transition: all 0.2s ease-in-out;
 	}
 }
-.user__input-ferld--clear {
-  
+.user__input-field--clear {
 	margin-left: -18px;
-	margin-right: 10px;
+	background-color: transparent;
+	overflow: hidden;
 }
 
 @media (max-width: 768px) {
@@ -46,17 +54,16 @@
 		width: 50%;
 		margin-top: 10px;
 	}
-	.user__input-ferld--clear {
+	.user__input-field--clear {
 		margin-right: 0;
 	}
 }
 
 @media (max-width: 576px) {
-  .user__input-field {
-    width: 80%;
-  }
-  .user__input-btn {
-    width: 80%;
-
-  }
+	.user__input-field {
+		width: 80%;
+	}
+	.user__input-btn {
+		width: 80%;
+	}
 }

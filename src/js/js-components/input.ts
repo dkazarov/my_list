@@ -1,6 +1,5 @@
 const inputField = document.querySelector('.user__input-field') as HTMLInputElement | null;
-const inputClear = document.querySelector('.user__input-ferld--clear') as HTMLButtonElement | null;
-const inputBtn = document.querySelector('.user__input-btn') as HTMLButtonElement | null;
+const inputClear = document.querySelector('.user__input-field--clear') as HTMLButtonElement | null;
 
 // Ініціалізація кнопки очистки інпуту
 const writeInput = () => {
