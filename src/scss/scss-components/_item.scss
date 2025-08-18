@@ -8,12 +8,29 @@
 	gap: 30px;
 }
 .content__item {
+	cursor: pointer;
 	display: flex;
 	justify-content: space-between;
 	background: linear-gradient(45deg, rgb(235, 246, 243), rgb(231, 221, 146));
 	padding: 10px;
 	box-shadow: -1px 4px 4px 0px rgba(34, 60, 80, 0.2);
 	border-radius: 6px;
+	transition: all 0.3s ease-in-out;
+
+	&:hover {
+		transition: all 0.3s ease-in-out;
+		transform: translateY(-2px);
+	}
+}
+.content__item-edit {
+	&:hover {
+		color: var(--action-color);
+	}
+}
+.content__item-delete {
+	&:hover {
+		color: var(--action-color);
+	}
 }
 
 @media (max-width: 768px) {
