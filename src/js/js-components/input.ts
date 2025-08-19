@@ -1,7 +1,6 @@
 const inputField = document.querySelector('.user__input-field') as HTMLInputElement | null;
 const inputClear = document.querySelector('.user__input-field--clear') as HTMLButtonElement | null;
 
-// Ініціалізація кнопки очистки інпуту
 const writeInput = () => {
 	inputField?.addEventListener('input', () => {
 		if (inputField && inputField.value !== '') {
@@ -11,7 +10,7 @@ const writeInput = () => {
 		}
 	});
 };
-// Видаляэ значення інпуту при кліку на хрестик
+
 const clearInput = () => {
 	inputClear?.addEventListener('click', () => {
 		clearInputValue();
@@ -21,18 +20,11 @@ const clearInput = () => {
 	});
 };
 
-// Ховає хрестик якщо клацнув поза інпутом
-const hideInputClear = () => {
-	document.addEventListener('click', e => {
-		e.target as HTMLElement;
-		if (!inputField?.contains(e.target as Node) && !inputClear?.contains(e.target as Node)) {
-			inputClear?.classList.add('--hide');
-			clearInputValue();
-		}
-	});
+// ФИКС: убрана очистка поля при клике вне области
+const showClearInput = () => {
+	document.addEventListener('click', e => e.target as HTMLElement);
 };
 
-// Очистка інпуту
 const clearInputValue = () => {
 	if (inputField) {
 		inputField.value = '';
@@ -40,5 +32,5 @@ const clearInputValue = () => {
 };
 
 export const input = (): void => {
-	clearInput(), hideInputClear(), writeInput();
+	clearInput(), showClearInput(), writeInput();
 };
