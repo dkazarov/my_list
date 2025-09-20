@@ -14,14 +14,15 @@
 	}
 }
 
-@media (max-width: 435px) {
+@media (max-width: 575px) {
   .random__btn {
     padding: 10px 60px;
+		margin-bottom: 40px;
   }
 }
 @media (max-width: 390px) {
   .random__btn {
     padding: 10px 35px;
-		margin-bottom: 40px;
+		margin-bottom: 25px;
   }
 }
