@@ -7,7 +7,7 @@
 
 // Block
 @use './block/header';
-@use './block/hero';
+@use './block/list-items';
 @use './block/footer';
 
 //Vendor
@@ -18,3 +18,4 @@
 @use './scss-components/main-title';
 @use './scss-components/user-form';
 @use './scss-components/random-btn';
+
