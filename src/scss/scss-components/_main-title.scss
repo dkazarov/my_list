@@ -1,10 +1,24 @@
 .title {
-  font-size: 42px;
-  line-height: 1.2;
+	font-size: 50px;
+	margin-bottom: 70px;
+	text-align: center;
 }
 
-@media (max-width: 390px) {
-  .title {
+@media (max-width: 768px) {
+	.title {
+    margin-bottom: 45px;
+	}
+}
+@media (max-width: 576px) {
+	.title {
+    font-size: 42px;
+    margin-bottom: 40px;
+	}
+}
+
+@media (max-width: 375px) {
+	.title {
     font-size: 36px;
-  }
+    margin-bottom: 22px;
+	}
 }

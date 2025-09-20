@@ -4,7 +4,7 @@
 	width: 100%;
 	background-color: var(--main-bg-color);
 	z-index: 1;
-	margin-bottom: 5%;
+	margin-bottom: 50px;
 }
 
 .header__inner {
@@ -34,6 +34,9 @@
 }
 
 @media (max-width: 768px) {
+	.header{
+		margin-bottom: 30px;
+	}
 	.nav {
 		position: fixed;
 		width: 100%;
@@ -67,6 +70,9 @@
 }
 
 @media (max-width: 414px) {
+	.header {
+		margin-bottom: 25px;
+	}
 	.nav__list {
 		font-size: 40px;
 	}
