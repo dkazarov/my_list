@@ -1,0 +1,27 @@
+@use 'variables' as *;
+
+html,
+body {
+	height: 100%;
+	margin: 0;
+}
+
+body {
+	font-family: var(--main-font), sans-serif;
+	color: var(--main-text-color);
+	font-weight: 400;
+}
+.wrapper {
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+}
+main {
+	flex: 1;
+}
+.container {
+	flex: 1;
+}
+.footer {
+	margin-top: auto;
+}

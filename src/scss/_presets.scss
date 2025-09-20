@@ -1,0 +1,42 @@
+@use 'variables';
+
+.container {
+	max-width: var(--container-width);
+	padding-left: var(--container-padding-x);
+	padding-right: var(--container-padding-x);
+	margin: 0 auto;
+}
+
+// hide nav
+nav.nav--hide {
+	right: -50%;
+}
+
+body.no-scroll {
+	overflow: hidden;
+}
+
+.btn--reset {
+	margin: 0;
+	padding: 0;
+	border: none;
+	cursor: pointer;
+}
+
+.--hode {
+	display: none !important;
+}
+
+.show-- {
+	display: block !important;
+}
+
+.--opacity-hide {
+	opacity: 0 !important;
+	transition: opacity 0.2s ease-in-out;
+}
+
+.--opacity-show {
+	opacity: 1 !important;
+	transition: opacity 0.2s ease-in-out;
+}
