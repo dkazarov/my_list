@@ -1,0 +1,27 @@
+.random__btn {
+	display: block;
+	margin: 0 auto;
+	background-color: var(--accent-color);
+	padding: 10px 100px;
+	color: var(--white);
+	border-radius: 6px;
+	margin-bottom: 46px;
+	transition: background-color 0.2s ease-in-out;
+
+	&:hover {
+		background-color: var(--accent-color-hover);
+		transition: background-color 0.2s ease-in-out;
+	}
+}
+
+@media (max-width: 435px) {
+  .random__btn {
+    padding: 10px 60px;
+  }
+}
+@media (max-width: 390px) {
+  .random__btn {
+    padding: 10px 35px;
+		margin-bottom: 40px;
+  }
+}

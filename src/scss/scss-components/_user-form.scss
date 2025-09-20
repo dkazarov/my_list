@@ -5,6 +5,7 @@
 	max-width: 50%;
 	margin: 0 auto;
 	gap: 0 2%;
+	margin-bottom: 40px;
 }
 .user__input-inner {
 	position: relative;
@@ -18,18 +19,20 @@
 	border: none;
 	border-bottom: 2px solid var(--action-color);
 	outline: none;
+	padding-right: 25px; /* ← добавили справа ~30px */
 }
 .user__input-reset {
 	position: absolute;
 	top: 50%;
 	transform: translateY(-50%);
 	right: 1%;
+	overflow: hidden;
 }
 .user__input-btn-add {
 	padding: 2% 6%;
 	background-color: var(--action-color);
 	color: var(--white);
-	border-radius: 4px;
+	border-radius: 6px;
 	transition: background-color 0.2s ease-in-out;
 
 	&:hover {
@@ -40,15 +43,22 @@
 }
 
 @media (max-width: 576px) {
-  .user__form {
-    flex-direction: column;
-    max-width: 90%;
-  }
-  .user__input-inner {
-    margin-bottom: 3%;
-  }
-  .user__input-btn-add {
-    width: 100%;
-    padding: 2% 0;
-  }
+	.user__form {
+		flex-direction: column;
+		max-width: 90%;
+		margin-bottom: 30px;
+	}
+	.user__input-inner {
+		margin-bottom: 3%;
+	}
+	.user__input-btn-add {
+		width: 100%;
+		padding: 2% 0;
+	}
+}
+
+@media (max-width: 475px) {
+	.user__form {
+		margin-bottom: 20px;
+	}
 }
