@@ -1,6 +1,7 @@
-const HOST_API:string = 'http://localhost:8888/my_list/api.php';
+const HOST_API: string = 'http://localhost:8888/my_list/api.php';
 
-const listItems = document.querySelector('.list__items');
+const list = document.querySelector('.list__items') as HTMLUListElement;
+const listItems = document.querySelector('.list__items') as HTMLDataListElement;
 
 interface Item {
 	title: string;
@@ -23,9 +24,11 @@ export const fetchAllItems = async () => {
 
 export const renderItems = (data: Item[]) => {
 	if (!listItems) return;
+	list.innerHTML = '';
 
 	data.forEach(item => {
 		const listItem = document.createElement('li');
+
 		listItem.classList.add('list__item');
 
 		listItem.innerHTML = `
@@ -40,4 +43,6 @@ export const renderItems = (data: Item[]) => {
 	});
 };
 
-export const getAndRenderItems = () => {fetchAllItems()} ;
+export const getAndRenderItems = () => {
+	fetchAllItems();
+};
