@@ -1,10 +1,10 @@
-const HOST_API = 'http://localhost:8888/my_list/api.php';
+const HOST_API:string = 'http://localhost:8888/my_list/api.php';
+
+const listItems = document.querySelector('.list__items');
 
 interface Item {
 	title: string;
 }
-
-const listItems = document.querySelector('.list__items');
 
 export const fetchAllItems = async () => {
 	try {
@@ -39,7 +39,5 @@ export const renderItems = (data: Item[]) => {
 		listItems.appendChild(listItem);
 	});
 };
-
-fetchAllItems();
 
 export const getAndRenderItems = () => {fetchAllItems()} ;
